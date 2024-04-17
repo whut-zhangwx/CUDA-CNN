@@ -134,7 +134,7 @@ $$
 
 #### Fully Connected Layer
 
-$$
+```math
 \begin{split}
 \frac{\partial Loss}{\partial Weight_{fc}[i_1][i_2][i_3][i_4]} &=
 \frac{\partial Loss}{\partial err[i_1]} \cdot
@@ -143,7 +143,7 @@ $$
 \frac{\partial PreA_{fc}[i_1]}{\partial Weight_{fc}[i_1][i_2][i_3][i_4]} \\
 &= err[i_1] \cdot 1 \cdot Out_{fc}[i_1](1-Out_{fc}[i_1]) \cdot Out_{c2}[i_2][i_3][i_4]
 \end{split}
-$$
+```
 
 $$
 \begin{split}
