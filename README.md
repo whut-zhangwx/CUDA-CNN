@@ -145,7 +145,7 @@ $$
 \end{split}
 ```
 
-$$
+```math
 \begin{split}
 \frac{\partial Loss}{\partial Bias_{fc}[i_1]} &=
 \frac{\partial Loss}{\partial err[i_1]} \cdot
@@ -154,11 +154,11 @@ $$
 \frac{\partial PreA_{fc}[i_1]}{\partial Bias_{fc}[i_1]} \\
 &= err[i_1] \cdot 1 \cdot Out_{fc}[i_1](1-Out_{fc}[i_1]) \cdot 1
 \end{split}
-$$
+```
 
 #### Convolution layer2
 
-$$
+```math
 \begin{split}
 \frac{\partial Loss}{\partial Weight_{c2}[i_5][i_6]} &=
 \sum_{i_1=0}^{9}\sum_{i_2=0}^{5}\sum_{i_3=0}^{5}\sum_{i_4=0}^{5}
@@ -176,9 +176,9 @@ err[i_1] \cdot 1 \cdot Out_{fc}[i_1](1-Out_{fc}[i_1])\\
 Out_{c2}[i_2][i_3][i_4](1-Out_{c2}[i_2][i_3][i_4]) \cdot
 Out_{c1}[i_2][4i_3+i_5][4i_4+i_6]
 \end{split}
-$$
+```
 
-$$
+```math
 \begin{split}
 \frac{\partial Loss}{\partial Bias_{c2}}
 &= \sum_{i_1=0}^{9}\sum_{i_2=0}^{5}\sum_{i_3=0}^{5}\sum_{i_4=0}^{5}
@@ -195,11 +195,11 @@ err[i_1] \cdot 1 \cdot Out_{fc}[i_1](1-Out_{fc}[i_1])
 &\cdot Weight_{fc}[i_1][i_2][i_3][i_4]
 \cdot Out_{c2}[i_2][i_3][i_4](1-Out_{c2}[i_2][i_3][i_4]) \cdot 1
 \end{split}
-$$
+```
 
 #### Convolution layer1
 
-$$
+```math
 \begin{split}
 \frac{\partial Loss}{\partial Weight_{c1}[i_2][i_7][i_8]} &=
 \sum_{i_1=0}^{9}\sum_{i_3=0}^{5}\sum_{i_4=0}^{5}\sum_{i_5=0}^{3}\sum_{i_6=0}^{3}
@@ -221,9 +221,9 @@ Weight_{c2}[i_5][i_6]\\
 &\cdot Out_{c1}[i_2][4i_3+i_5][4i_4+i_6](1-Out_{c1}[i_2][4i_3+i_5][4i_4+i_6])
 \cdot Out_{in}[4i_3+i_5+i_7][4i_4+i_6+i_8]
 \end{split}
-$$
+```
 
-$$
+```math
 \begin{split}
 \frac{\partial Loss}{\partial Bias_{c1}[i_2]} &=
 \sum_{i_1=0}^{9}\sum_{i_3=0}^{5}\sum_{i_4=0}^{5}\sum_{i_5=0}^{3}\sum_{i_6=0}^{3}
@@ -245,4 +245,4 @@ Weight_{c2}[i_5][i_6]\\
 &\cdot Out_{c1}[i_2][4i_3+i_5][4i_4+i_6](1-Out_{c1}[i_2][4i_3+i_5][4i_4+i_6])
 \cdot 1
 \end{split}
-$$
+```
