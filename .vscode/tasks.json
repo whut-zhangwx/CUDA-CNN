@@ -1,0 +1,36 @@
+{
+  "version": "2.0.0",
+  "tasks": [
+    {
+      "label": "build-cuda-cnn",
+      "type": "shell",
+      "command": "nvcc",
+      "args": [
+        "-g", "-G", // for debugging with cuda-gdb
+        // "${file}",
+        "${workspaceFolder}/main.cu", "${workspaceFolder}/layer.cu",
+        // "-o", "${fileDirname}/${fileBasenameNoExtension}",
+        "-o", "${workspaceFolder}/CNN",
+        "-lcuda", "-lcublas",
+      ],
+      "group": "build"
+    },
+    {
+      "label": "build-draft",
+      "type": "shell",
+      "command": "nvcc",
+      "args": [
+        "-g", "-G", // for debugging with cuda-gdb
+        "${file}",
+        "-o", "${fileDirname}/${fileBasenameNoExtension}"
+      ],
+      "group": {
+        "kind": "build",
+        "isDefault": true
+      },
+      "problemMatcher": [
+        "$nvcc"
+      ]
+    }
+  ]
+}

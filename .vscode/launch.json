@@ -1,0 +1,22 @@
+{
+  "version": "0.2.0",
+  "configurations": [
+    {
+      "name": "CUDA-CNN",
+      "type": "cuda-gdb",
+      "request": "launch",
+      "program": "${workspaceFolder}/CNN",
+      "debuggerPath": "/usr/bin/cuda-gdb", // use command "which cuda-gdb" to find the path in linux
+      "preLaunchTask": "build-cuda-cnn",
+    },
+    {
+      "name": "draft",
+      "type": "cuda-gdb",
+      "request": "launch",
+      "program": "${workspaceFolder}/draft",
+      "debuggerPath": "/usr/bin/cuda-gdb", // use command "which cuda-gdb" to find the path in linux
+      "preLaunchTask": "build-draft",
+      
+    }
+  ]
+}
