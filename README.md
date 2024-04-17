@@ -112,7 +112,7 @@ $$
 
 ### Loss Function
 
-对于一个样本$(img,label)$的输出$Out_{fc}$, 令 $err[i], i\in\{0,1,\cdots,9\}$ 表示每个类别的预估错误
+对于一个样本 $(img,label)$ 的输出 $Out_{fc}$, 令 $err[i], i\in\{0,1,\cdots,9\}$ 表示每个类别的预估错误
 
 $$
 err[i] =
@@ -122,7 +122,7 @@ Out_{fc}[i], & i\neq label\\
 \end{cases}
 $$
 
-其中$err[label]$本应为$1-Out_{fc}[label]$, 但是为了方便后面求梯度时$\frac{\partial Loss}{\partial err[i]} \cdot\frac{\partial err[i]}{\partial Out_{fc}[i]} = err[i]$的表示, 我们为它加了个负号. 这对计算Loss没有影响, 因为都要平方.
+其中 $err[label]$ 本应为 $1-Out_{fc}[label]$, 但是为了方便后面求梯度时 $\frac{\partial Loss}{\partial err[i]} \cdot\frac{\partial err[i]}{\partial Out_{fc}[i]} = err[i]$ 的表示, 我们为它加了个负号. 这对计算Loss没有影响, 因为都要平方.
 
 采用预估错误的平方和来计算损失
 
