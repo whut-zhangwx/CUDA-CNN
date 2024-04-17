@@ -1,5 +1,7 @@
 ## CUDA-CNN
 
+如果数学公式渲染出错，请移步我的博客[CUDA-CNN](https://onexiaophai.gitee.io/2024/04/17/CUDA-CNN/)查看项目的介绍
+
 ### 项目简介
 
 这是一个用CUDA实现的 CNN (Convolutional Neural Network)，使用MINIST数据集进行训练，epoch=10，耗时35.8s，在测试集上的分类正确率达到96.54%。
